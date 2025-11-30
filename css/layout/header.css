@@ -1,0 +1,103 @@
+/* header */
+
+.header {
+    padding-top: 29px;
+    background-color: #2C3B45;
+}
+
+/***** МЕНЮ *****/
+.menu__container {
+    display: flex;
+    /* Равномерно распределяет все элементы по ширине flex-блока.
+    Первый элемент вначале, последний в конце */
+    justify-content: space-between;
+    /* Отступы между колонками flex - контейнера */
+    column-gap: 10px;
+}
+
+/* Логотип*/
+.logo {
+    /* Сделать логотип flex - контейнером */
+    display: flex;
+    /* Запретить логотипу ужиматься */
+    flex-shrink: 0;
+    /* Чтобы выровнять телефон и логотип по одной линии поместим логотип по центру своего блока */
+    align-items: center;
+}
+
+/* Картинка логотипа */
+.logo__img {}
+
+/* Список навигации */
+.nav__list {
+    display: flex;
+    column-gap: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+/* Применить к списку nav__list стили, если он находится внутри шапки */
+.header .nav__list {
+    background: #404F59;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px 40px;
+    margin-top: -29px;
+}
+
+/* Анимация на ссылке */
+.nav__link {
+    transition: all 0.3s;
+}
+
+/* Смена цвета ссылки при наведении */
+.nav__link:hover {
+    color: #1e92e7;
+}
+
+/***** Стилизация телефона внутри header *****/
+
+.phone {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.phone span {
+    color: #FFFFFF;
+}
+
+.phone::before {
+    content: "";
+    background-image: url(../../images/icons/tel.svg);
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+/* .phone__icon {
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+} */
+
+.phone__link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+}
+
+.burger {
+    display: none;
+    padding: 0px;
+}

@@ -1,0 +1,136 @@
+/* hero */
+
+.hero {
+    /* Нижняя граница */
+    border-bottom: 50px solid #1E92E7;
+    /* Цвет секции */
+    background-color: #2C3B45;
+    /* Внутренний отступ от верхнего края */
+    padding-top: clamp(28px, 6vw, 71px);
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.hero__content {
+    /* 602px/1180px = 51% */
+    flex: 1 0 51%;
+    padding-right: 20px;
+    /* 92px / 1260px = 7.3 */
+    padding-top: clamp(46px, 7.3vw, 92px);
+    padding-bottom: clamp(100px, 16vw, 200px);
+}
+
+.address {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1E92E7;
+    /* 36px / 602px = 6% */
+    margin-bottom: 6%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.address::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-image: url('../../images/icons/clarity_map-marker-solid.svg');
+}
+
+/* .address__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+} */
+
+.title {
+    /* Расположить верхнюю и нижнюю часть заголовка друг под другом */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    /* 56/1260 */
+    font-size: clamp(36px, 4.44vw, 56px);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    /* 48px/602px = 7.7% */
+    margin-bottom: 7.7%;
+}
+
+.hero__title {}
+
+.hero__btns {
+    /* Установим минимальную ширину кнопки как в макете */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+}
+
+.hero__btns .btn {
+    min-width: 244px;
+}
+
+.hero__btns .btn:nth-child(2) {
+    display: none;
+}
+
+/* Обратимся ко второй кнопке.
+Зададим ей цвет текста и пока спрячем ее, она появится только на мобильнике 
+*/
+/* .hero__btn:nth-child(2) {
+    color: #FFFFFF;
+    display: none;
+} */
+
+.hero__img-wrap {
+    /* Убираем у картинки отступ снизу */
+    line-height: 0px;
+    /* flex: 1 1 auto; */
+    position: relative;
+    padding-left: clamp(30px, 6vw, 85px);
+}
+
+.hero__img {
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom left;
+    position: relative;
+    z-index: 10;
+}
+
+.hero__img-wrap::before,
+.hero__img-wrap::after {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    border-radius: 5px 0 0 0;
+
+}
+
+.hero__img-wrap::before {
+    background-image: url('../../images/bg/sky.jpg');
+    z-index: 9;
+}
+
+.hero__img-wrap:after {
+    top: -15px;
+    left: 30px;
+    background-color: #404f59;
+    z-index: 8;
+}

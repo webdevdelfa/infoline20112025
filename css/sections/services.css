@@ -1,0 +1,99 @@
+.services {
+    /* Задаем фоновый цвет как в макете */
+    background-color: #F8F8F8;
+    /* Внутренние отступы для секции (по макету) */
+    padding: 90px 0px 120px;
+}
+
+/* Шапка секции (заголовок и логотип) */
+.services__header {
+    display: flex;
+    /* Размещаем заголовок секции и логотип по разным краям секции */
+    justify-content: space-between;
+    /* Выравниваем элементы по центру поперечной оси*/
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.section-title {}
+
+.services__title {}
+
+.services__logo {
+    opacity: 0.4;
+}
+
+.logo__icon {
+    fill: rgba(30, 147, 231);
+}
+
+.logo__text {
+    fill: rgba(0, 0, 0, 0.4);
+}
+
+.services__list {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 380px;
+    min-height: 172px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    flex: 1 0 auto;
+}
+
+.service__img {
+    flex-shrink: 0;
+    display: flex;
+    width: 70px;
+    padding: 0px 15px;
+    align-items: center;
+    background-color: #2c3b45;
+}
+
+.service__pic {
+    width: 40px;
+    height: 40px;
+}
+
+.service__content {
+    padding: 30px 40px 30px 20px;
+}
+
+.service__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+}
+
+.service__list {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #9c9c9c;
+    /* Позиция маркера (маркер обтекается текстом) */
+    /* list-style-position: inside; */
+    /*Значение подобрано через панель разработчика*/
+    margin-left: 18px;
+}
+
+.service__item {
+    list-style: revert;
+    /* Альтернативный способ */
+    /* display: flex;
+    column-gap: 10px; */
+
+}
+
+/* .service__item::before {
+    content: "\2022";
+} */

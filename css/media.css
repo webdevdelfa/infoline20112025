@@ -1,0 +1,220 @@
+@media (max-width: 830px) {
+    :root {
+        --container-max-width: 93%;
+    }
+
+    .container {
+        width: var(--container-max-width);
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .menu {
+        background: #404F59;
+        border-radius: 0px 0px 10px 10px;
+        padding: 16px 0px;
+        width: 100%;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .hero__img-wrap {
+        flex: 1 0 50vw;
+    }
+
+    .hero__img {}
+
+    /* Прячем блок с кнопками (секция Аренда) */
+    .filter-btns {
+        display: none;
+    }
+
+    /* Отображаем селект */
+    .filter-select-wrap {
+        display: inline-block;
+    }
+
+    /* .carousel__inner {
+        margin-right: calc((100vw - 100%) / -2);
+    } */
+
+    .carousel__inner {
+        margin-right: -7vw;
+    }
+
+    .carousel__control {
+        display: none;
+    }
+
+    .card {
+        width: 307px;
+    }
+
+    .carousel__indicator {
+        flex: 0 1 85px;
+    }
+
+    .services__logo {
+        display: none;
+    }
+
+    .gallery__photo {
+        flex: 0 0 432px;
+        height: 285px;
+    }
+
+    .gallery__inner {
+        padding-left: 3.5vw;
+    }
+
+    .gallery__control--prev {
+        display: none;
+    }
+
+    .gallery__control--next {
+        margin-right: 3.5vw;
+    }
+
+    .contacts {
+        /* Переменная для ширины левого цвета фона и декоративного изображения */
+        --contacts-left-col: 72%;
+        /* Двухцветный фон создаем при помощи градиента */
+        background: linear-gradient(180deg, #2C3B45 0, #2C3B45 var(--contacts-left-col), #1E92E7 var(--contacts-left-col));
+    }
+
+    .contacts__container {
+        flex-direction: column;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 579px) {
+    .container {
+        max-width: 91.5%;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .address {
+        justify-content: center;
+    }
+
+    .hero__img-wrap {
+        margin-left: -3.5vw;
+        margin-right: -3.5vw;
+        padding-left: 0;
+        text-align: center;
+    }
+
+
+    .hero__content {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .hero__btns {
+        align-items: center;
+    }
+
+    .hero__img-wrap:after {
+        display: none;
+    }
+
+    .hero__img-wrap::before {
+        border-radius: 0;
+        height: 92%;
+        top: auto;
+        bottom: 0;
+    }
+
+    .hero__img {
+        width: 248px;
+    }
+
+    .carousel-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        background-color: #fff;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+    }
+
+    .carousel-control__icon {
+        width: 8px;
+        height: 14px;
+        color: #1e92e7;
+    }
+
+    .rent__carousel-control--prev {
+        display: none;
+    }
+
+    .carousel__indicators {
+        column-gap: 6px;
+    }
+
+    .carousel__indicator {
+        flex: 0 1 52px;
+    }
+
+    .service {
+        width: 343px;
+        min-height: 152px;
+    }
+
+    .service__content {
+        padding: 20px 10px;
+    }
+}
+
+@media (min-width:580px) and (max-width:830px) {
+    .services__list {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .service {
+        width: 260px;
+        min-height: auto;
+        border-radius: 5px;
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .service__img {
+        width: 100%;
+        padding: 0;
+        background-color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .service__content {
+        padding: 0px;
+    }
+}
